@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Slider from "react-slick"; // Import carousel
+import GitHubIcon from "@mui/icons-material/GitHub";
 import {
   Box,
   Typography,
@@ -106,42 +107,24 @@ function ProjectItemDetails() {
 
           {/* Container for Project specs */}
           <Container sx={{ flex: 1, textAlign: "left", mt: 5, mb: 1 }}>
-            <Typography
-              variant="body1"
-              sx={{ color: "background.paper", mt: 2 }}
-            >
-              Genre: {project.genre}
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ color: "background.paper", mt: 2 }}
-            >
-              Publisher: {project.publisher}
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{ color: "background.paper", mt: 2 }}
-            >
-              Release Date: {project.releaseDate}
-            </Typography>
-            <Typography
+            {/* <Typography
               variant="body1"
               sx={{ color: "background.paper", mt: 2 }}
             >
               Platform: {project.platform}
-            </Typography>
-            {/* LinkedIn Icon */}
+            </Typography> */}
+            {/* GitHub Icon */}
             <IconButton
               component={Link}
-              href={project.storeLink}
+              href={project.githubProject}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit my App Store page"
               sx={{ mt: { xs: 1, md: 0 } }} // Adds space below LinkedIn icon on small screens
             >
-              <GetAppIcon sx={{ color: "background.paper", fontSize: 32 }} />
+              <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
               <Typography variant="body1" sx={{ color: "background.paper" }}>
-                App Store Page
+                Github Project Page
               </Typography>
             </IconButton>
           </Container>
