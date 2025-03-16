@@ -9,7 +9,8 @@
       "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg3.jpeg"
     ],
     "description": "insert text",
-    "githubProject": ""
+    "githubProject": "",
+    "exampleLink": ""
   },
   {
     "id": 2,
@@ -22,7 +23,8 @@
       "/ProjectPhotos/Room8tsWebApp/roomImg4.jpeg"
     ],
     "description": "insert text",
-    "githubProject": "https://github.com/Raspupin/roommatesApp"
+    "githubProject": "https://github.com/Raspupin/roommatesApp",
+    "exampleLink": ""
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
       "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMG2.jpeg",
       "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMG3.jpeg"
     ],
-    "description": "insert text",
-    "githubProject": "https://github.com/Raspupin/de_portfolio"
+    "description": "I developed a reusable portfolio website template using React and Vite, designed for quick deployment and easy customization. This very website was built using the same template. The project features a fully responsive design, single-page application (SPA) structure, and JSON-based content management, allowing projects to be added or updated without modifying the code. A built-in theme system controls colors, fonts, and layout centrally, making design changes instant. With automated deployment via GitHub and Vercel, this template enables fast and cost-effective website creation, avoiding expensive platforms like Wix or GoDaddy.",
+    "githubProject": "https://github.com/Raspupin/de_portfolio",
+    "exampleLink": "https://edgartemkin.site/"
   }
 ]

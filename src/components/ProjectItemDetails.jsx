@@ -17,6 +17,7 @@ import projectsData from "../data/projectData.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CloseIcon from "@mui/icons-material/Close";
+import PublicIcon from "@mui/icons-material/Public";
 
 function ProjectItemDetails() {
   const { name } = useParams(); // Get project Name from URL
@@ -65,107 +66,135 @@ function ProjectItemDetails() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" }, // Stack on mobile, row on larger screens
+          flexDirection: "column", // Always in a column
           alignItems: "center",
-          gap: 3,
+          gap: 4, // Space between sections
           p: 3,
           bgcolor: "primary.main",
           borderRadius: 3,
           boxShadow: 8,
           border: "5px solid",
           borderColor: "background.paper",
+          maxWidth: 800, // Prevents it from stretching too wide
+          mx: "auto", // Centers it horizontally
         }}
       >
-        {/* Left Side: Carousel */}
-        <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <Box sx={{ width: "100%", maxWidth: 350 }}>
-            <Slider {...settings}>
-              {[].concat(project.image).map(
-                (
-                  img,
-                  index // Always treat as array
-                ) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => handleImageClick(img)} // Click to open full-screen
-                  >
-                    <img
-                      src={img}
-                      alt={`Slide ${index + 1}`}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        objectFit: "cover",
-                        borderRadius: "8px",
-                        boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)",
-                      }}
-                    />
-                  </Box>
-                )
-              )}
-            </Slider>
-          </Box>
-        </Box>
-
-        {/* Middle: Project Details */}
-        <Box sx={{ flex: 1, textAlign: "center" }}>
+        {/* Top: Project Details */}
+        <Box sx={{ textAlign: "center", width: "90%" }}>
           <Typography
             variant="h4"
-            sx={{ color: "background.paper", fontWeight: "bold", mb: 2 }}
+            sx={{
+              color: "background.paper",
+              fontWeight: "bold",
+              mb: 3,
+              textAlign: "center",
+            }}
           >
             {project.name}
           </Typography>
           <Typography variant="body1" sx={{ color: "background.paper", mt: 2 }}>
             {project.description}
           </Typography>
-
-          {/* Container for Project specs */}
-          <Container sx={{ flex: 1, textAlign: "left", mt: 5, mb: 1 }}>
-            {/* <Typography
-              variant="body1"
-              sx={{ color: "background.paper", mt: 2 }}
-            >
-              Platform: {project.platform}
-            </Typography> */}
-            {/* GitHub Icon */}
-            {project.githubProject && (
-              <IconButton
-                component={Link}
-                href={project.githubProject}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit my App Store page"
-                sx={{ mt: { xs: 1, md: 0 } }} // Adds space below LinkedIn icon on small screens
-              >
-                <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
-                <Typography variant="body1" sx={{ color: "background.paper" }}>
-                  Github Project Page
-                </Typography>
-              </IconButton>
-            )}
-          </Container>
-
-          {/* Back Button */}
-
-          <Button
-            variant="contained"
-            sx={{
-              mt: 3,
-              border: "1px solid",
-              textTransform: "none",
-              fontSize: "1.005rem",
-            }}
-            onClick={() => navigate("/")}
-          >
-            Back to Projects
-          </Button>
         </Box>
+
+        {/* Middle: Project Specs & GitHub Link */}
+        <Container sx={{ textAlign: "center", mt: 1, mb: 0 }}>
+          {project.githubProject && (
+            <IconButton
+              component={Link}
+              href={project.githubProject}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit GitHub project"
+              sx={{ border: "2px solid #FFFFFF", borderRadius: "3px" }}
+            >
+              <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
+              <Typography
+                variant="body1"
+                sx={{ color: "background.paper", ml: 1 }}
+              >
+                GitHub Project Page
+              </Typography>
+            </IconButton>
+          )}
+        </Container>
+        <Container sx={{ textAlign: "center", mt: 0 }}>
+          {project.exampleLink && (
+            <IconButton
+              component={Link}
+              href={project.exampleLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit outcome link"
+              sx={{ border: "2px solid #FFFFFF", borderRadius: "3px" }}
+            >
+              <PublicIcon sx={{ color: "background.paper", fontSize: 32 }} />
+              <Typography
+                variant="body1"
+                sx={{ color: "background.paper", ml: 1 }}
+              >
+                View Outcome
+              </Typography>
+            </IconButton>
+          )}
+        </Container>
+
+        {/* Bottom: Carousel */}
+        <Typography
+          variant="h5"
+          sx={{ color: "background.paper", fontWeight: "bold", mb: 0 }}
+        >
+          Screenshots
+        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            maxWidth: 450,
+            border: "5px solid #FFFFFF",
+            backgroundColor: "#FFFFFF",
+          }}
+        >
+          <Slider {...settings}>
+            {[].concat(project.image).map((img, index) => (
+              <Box
+                key={index}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                }}
+                onClick={() => handleImageClick(img)} // Click to open full-screen
+              >
+                <img
+                  src={img}
+                  alt={`Slide ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                />
+              </Box>
+            ))}
+          </Slider>
+        </Box>
+        {/* Back Button */}
+        <Button
+          variant="contained"
+          sx={{
+            textTransform: "none",
+            fontSize: "1.005rem",
+            border: "4px solid #FFFFFF",
+            mt: 2,
+          }}
+          onClick={() => navigate("/projects")}
+        >
+          Back to Projects
+        </Button>
       </Box>
+
       {/* Full-Screen Image Dialog */}
       <Dialog open={open} onClose={handleClose} maxWidth="xl">
         <Box sx={{ position: "relative", textAlign: "center" }}>

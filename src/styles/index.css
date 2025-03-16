@@ -5,3 +5,18 @@ body {
   margin-left: 1em;
   padding: 0;
 }
+/* Change inactive dots to white with a border */
+.slick-dots li button:before {
+  color: #ffffff !important; /* White color */
+  opacity: 0.5; /* Slight transparency */
+  font-size: 10px !important; /* Increase dot size */
+  margin-top: 6px;
+}
+
+/* Change active dot to fully white with a thicker border */
+.slick-dots li.slick-active button:before {
+  color: #ffffff !important;
+  opacity: 1;
+  font-size: 12px !important; /* Bigger size for active dot */
+  margin-top: 6px;
+}
