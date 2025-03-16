@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Slider from "react-slick"; // Import carousel
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -10,16 +10,30 @@ import {
   Button,
   Link,
   IconButton,
+  Dialog,
 } from "@mui/material";
 import GetAppIcon from "@mui/icons-material/GetApp";
 import projectsData from "../data/projectData.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 function ProjectItemDetails() {
   const { name } = useParams(); // Get project Name from URL
   const navigate = useNavigate();
   const project = projectsData.find((p) => p.name === name); // Find project by Name
+
+  const [open, setOpen] = useState(false);
+  // Close full-screen mode
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const [selectedImg, setSelectedImg] = useState("");
+  const handleImageClick = (img) => {
+    setSelectedImg(img);
+    setOpen(true);
+  };
 
   if (!project) {
     return (
@@ -73,7 +87,12 @@ function ProjectItemDetails() {
                 ) => (
                   <Box
                     key={index}
-                    sx={{ display: "flex", justifyContent: "center" }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => handleImageClick(img)} // Click to open full-screen
                   >
                     <img
                       src={img}
@@ -114,19 +133,21 @@ function ProjectItemDetails() {
               Platform: {project.platform}
             </Typography> */}
             {/* GitHub Icon */}
-            <IconButton
-              component={Link}
-              href={project.githubProject}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit my App Store page"
-              sx={{ mt: { xs: 1, md: 0 } }} // Adds space below LinkedIn icon on small screens
-            >
-              <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
-              <Typography variant="body1" sx={{ color: "background.paper" }}>
-                Github Project Page
-              </Typography>
-            </IconButton>
+            {project.githubProject && (
+              <IconButton
+                component={Link}
+                href={project.githubProject}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit my App Store page"
+                sx={{ mt: { xs: 1, md: 0 } }} // Adds space below LinkedIn icon on small screens
+              >
+                <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
+                <Typography variant="body1" sx={{ color: "background.paper" }}>
+                  Github Project Page
+                </Typography>
+              </IconButton>
+            )}
           </Container>
 
           {/* Back Button */}
@@ -145,6 +166,33 @@ function ProjectItemDetails() {
           </Button>
         </Box>
       </Box>
+      {/* Full-Screen Image Dialog */}
+      <Dialog open={open} onClose={handleClose} maxWidth="xl">
+        <Box sx={{ position: "relative", textAlign: "center" }}>
+          <IconButton
+            onClick={handleClose}
+            sx={{
+              position: "absolute",
+              top: 10,
+              right: 10,
+              color: "white",
+              backgroundColor: "rgba(0,0,0,0.5)",
+              "&:hover": { backgroundColor: "rgba(0,0,0,0.7)" },
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <img
+            src={selectedImg}
+            alt="Full-Size Preview"
+            style={{
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
+      </Dialog>
     </Container>
   );
 }
