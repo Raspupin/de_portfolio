@@ -6,18 +6,18 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#31363F", // Lighter Dark Grey
+      main: "#071952", // Lighter Dark Grey
     },
     secondary: {
-      main: "#76ABAE", // Dark Grey
+      main: "#FfFfFf", // Dark Grey
     },
     background: {
-      default: "#EEEEEE", // White Cream
-      paper: "#EEEEEE", // Slightly lighter background for cards
+      default: "#FfFfFf", // White Cream
+      paper: "#FfFfFf", // Slightly lighter background for cards
     },
     text: {
-      primary: "#222831", // Dark Grey
-      secondary: "#31363F", // Lighter Dark Grey
+      primary: "#071952", // Dark Grey
+      secondary: "#F5F5F5", // Lighter Dark Grey
     },
   },
 });

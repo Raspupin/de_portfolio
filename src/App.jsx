@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Navbar data={aboutData} />
         <Box sx={{ flex: 1 }}>
-          <Hero />
+          <Hero data={aboutData} />
           <Routes>
             <Route path="/" element={<Navigate to="/projects" />} />
             <Route path="/projects" element={<Projects />} />

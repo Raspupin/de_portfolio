@@ -1,9 +1,10 @@
 {
   "id": 1,
-  "name": "Edgar Temkin",
-  "description": "I'm Edgar Temkin, a Game Designer & Product Manager with a B.Sc. in Game Design & Development from Tiltan School of Design & Visual Communication. With a strong background in game design, project management, and cross-team collaboration, I specialize in creating engaging mechanics and immersive player experiences.\nThroughout my career, I've worked on a variety of projects, leading game development, balancing mechanics, and ensuring smooth production using Agile methodologies. I thrive on designing innovative gameplay systems, optimizing user experience, and bringing creative ideas to life.\nPassionate about games that challenge and entertain, I’m always exploring new ways to push boundaries and craft compelling experiences that resonate with players.",
+  "name": "Daniel Ermakov",
+  "title": "Web Developer | Programmer",
+  "description": "I am Daniel Ermakov, a junior web developer with a B.Sc. in Information Systems from Max Stern Yezreel Valley College, specializing in Web Technologies. Over the past two years, I have worked as a tutor, guiding students in data structures, Object-Oriented Programming (OOP) in Java, and SQL fundamentals. My technical expertise includes backend development with Node.js, Express.js, and Java, as well as frontend development with React. I also have experience working with SQL and Python, working with databases, and handling data processing tasks.Beyond development, I have participated in leveraging Large Language Models (LLMs) for data analysis and worked with web scraping using Selenium in Java, managing and processing data through Google Sheets automation. Currently, I am deepening my skills in backend development, focusing on scalable server-side architectures, database management, and API development. I am eager to bring my passion for clean, efficient code and problem-solving to any project I'm in.",
   "imageURL": "/aboutMePhotos/profilePic.png",
-  "linkedinURL": "https://www.linkedin.com/in/edgar-temkin/",
-  "email": "edgar384384@gmail.com",
-  "githubURL": null
+  "linkedinURL": "https://www.linkedin.com/in/daniel-ermakov-591580273/",
+  "email": "danielermakov2012@gmail.com",
+  "githubURL": "https://github.com/Raspupin"
 }

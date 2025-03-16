@@ -52,7 +52,7 @@ function Navbar({ data }) {
 
         {/* Name */}
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Edgar Temkin
+          {data.name}
         </Typography>
 
         {/* Desktop View: Show Buttons */}

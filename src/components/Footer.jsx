@@ -64,8 +64,7 @@ function Footer({ data }) {
         >
           <LinkedInIcon />
         </IconButton>
-        {/* Github Icon NOT NEEDED /*/}
-        {/* <IconButton
+        <IconButton
           component="a"
           href={data.githubURL || "https://github.com/"}
           target="_blank"
@@ -75,7 +74,7 @@ function Footer({ data }) {
           }}
         >
           <GitHubIcon />
-        </IconButton> */}
+        </IconButton>
       </Box>
 
       {/* Copyright */}

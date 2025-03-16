@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 
-function Hero() {
+function Hero({ data }) {
   return (
     <Box
       sx={{
@@ -17,13 +17,13 @@ function Hero() {
     >
       <Container>
         <Typography variant="h3" sx={{ fontWeight: "bold", mb: 1 }}>
-          Edgar Temkin
+          {data.name}
         </Typography>
         <Typography
           variant="h5"
           sx={{ opacity: 0.8, maxWidth: "600px", mx: "auto" }}
         >
-          Game Designer | Product Manager
+          {data.title}
         </Typography>
       </Container>
     </Box>
