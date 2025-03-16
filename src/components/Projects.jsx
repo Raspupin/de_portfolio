@@ -90,7 +90,7 @@ function Projects() {
                 to={`/projects/${project.name}`}
                 style={{ textDecoration: "none", width: "100%" }}
               >
-                <ProjectItem image={project.image} name={project.name} />
+                <ProjectItem image={project.image[0]} name={project.name} />
               </Link>
             </Box>
           ))}

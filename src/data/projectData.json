@@ -1,9 +1,14 @@
 [
   {
     "id": 1,
-    "name": "Merge Rumble",
-    "image": "/ProjectPhotos/mergeRumble.jpg",
-    "description": "Merge Rumble – Merge units, strategize, and survive endless waves of intense battles! Upgrade your forces, outsmart enemies, and dominate the battlefield in this dynamic merge game.",
+    "name": "Industrial Companies in Israel Data Set",
+    "image": [
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImgLogo.jpg",
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg1.jpeg",
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg2.jpeg",
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg3.jpeg"
+    ],
+    "description": "insert text",
     "video": "https://youtube.com/embed/tvSWa-bn-As?si=a3vIFi-nUP-aAm4Y",
     "storeLink": "https://apps.apple.com/cn/app/merge-rumble-idle-td/id6739533934",
     "publisher": "Hoppa-Play",
@@ -12,10 +17,16 @@
     "platform": "Android/IOS"
   },
   {
-    "id": 2,
-    "name": "Bag Legends",
-    "image": "/ProjectPhotos/BagLegends.png",
-    "description": "Bag Legends: Hero RPG – Merge heroes, strategize your lineup, and conquer wave-based battles! Upgrade your squad, position units wisely, and unlock powerful rewards in this dynamic auto-battler.",
+    "id": 3,
+    "name": "Room8es Web App",
+    "image": [
+      "/ProjectPhotos/Room8tsWebApp/roomImgLogo.jpeg",
+      "/ProjectPhotos/Room8tsWebApp/roomImg1.jpeg",
+      "/ProjectPhotos/Room8tsWebApp/roomImg2.png",
+      "/ProjectPhotos/Room8tsWebApp/roomImg3.jpeg",
+      "/ProjectPhotos/Room8tsWebApp/roomImg4.jpeg"
+    ],
+    "description": "insert text",
     "video": "https://youtube.com/embed/56pIf9Ebt7A?si=W8lD0CxFDhUp-I3Y",
     "storeLink": "https://apps.apple.com/ng/app/bag-legends-hero-rpg/id6742070963?uo=2",
     "publisher": "Hoppa-Play",
@@ -24,39 +35,20 @@
     "platform": "Android/IOS"
   },
   {
-    "id": 3,
-    "name": "Mergemancer",
-    "image": "/ProjectPhotos/Mergemancer.png",
-    "description": "Mergemancer Adventure – Merge, upgrade, and defend in this strategic tower defense game! Combine powerful units, place towers wisely, and survive relentless enemy waves.",
-    "video": "https://youtube.com/embed/a5Klec8x56Y?si=Lh85NTni9kkSJfqX",
-    "storeLink": "https://play.google.com/store/apps/details?id=com.ek.hoppaplay.mrw",
+    "id": 2,
+    "name": "Reusable Portfolio Page Template",
+    "image": [
+      "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMGMain.jpg",
+      "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMG1.jpeg",
+      "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMG2.jpeg",
+      "/ProjectPhotos/ReusablePortfolioPageTemplate/portfolioIMG3.jpeg"
+    ],
+    "description": "insert text",
+    "video": "https://youtube.com/embed/56pIf9Ebt7A?si=W8lD0CxFDhUp-I3Y",
+    "storeLink": "https://apps.apple.com/ng/app/bag-legends-hero-rpg/id6742070963?uo=2",
     "publisher": "Hoppa-Play",
     "genre": "Hybrid Casual ",
-    "releaseDate": "07/11/2024",
-    "platform": "Android"
-  },
-  {
-    "id": 4,
-    "name": "Fire Blob",
-    "image": "/ProjectPhotos/FireBlob.jpg",
-    "description": "In FireBlob, you control a growing fire creature, burning objects to reach 100% size before time runs out. Create flame loops for explosions, adding a strategic twist to the action.",
-    "video": "https://youtube.com/embed/LgBZpYAEUcs?si=P8k8SBDG0qFbkNxX",
-    "storeLink": "https://play.google.com/store/apps/details?id=com.hoppaplay.fireblob",
-    "publisher": "Hoppa-Play",
-    "genre": "Casual ",
-    "releaseDate": "02/02/2025",
-    "platform": "Android"
-  },
-  {
-    "id": 5,
-    "name": "Color Defender",
-    "image": "/ProjectPhotos/ColorDefender.png",
-    "description": "Color Defender: TD RPG – A strategic blend of tower defense and RPG! Switch colors for unique abilities, merge upgrades, and unleash powerful combos to defend against endless waves of enemies.",
-    "video": "https://youtube.com/embed/hCPLYzg5a5c?si=jk56ZV91unOl_CdU",
-    "storeLink": "https://apps.apple.com/cn/app/color-defender-td-rpg/id6740234620",
-    "publisher": "Hoppa-Play",
-    "genre": "Hybrid Casual ",
-    "releaseDate": "17/02/2025",
+    "releaseDate": "18/02/2025",
     "platform": "Android/IOS"
   }
 ]

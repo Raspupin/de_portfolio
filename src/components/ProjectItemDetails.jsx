@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Slider from "react-slick"; // Import carousel
 import {
   Box,
   Typography,
@@ -11,6 +12,8 @@ import {
 } from "@mui/material";
 import GetAppIcon from "@mui/icons-material/GetApp";
 import projectsData from "../data/projectData.json";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function ProjectItemDetails() {
   const { name } = useParams(); // Get project Name from URL
@@ -29,6 +32,18 @@ function ProjectItemDetails() {
       </Container>
     );
   }
+  // Slick carousel settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1, // Show ONLY one slide at a time
+    slidesToScroll: 1, // Move one slide per scroll
+    autoplay: false,
+    //autoplaySpeed: 3000 //disabled due to autoplay false
+    arrows: true,
+    adaptiveHeight: true, // Ensures images are aligned properly
+  };
 
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
@@ -46,30 +61,36 @@ function ProjectItemDetails() {
           borderColor: "background.paper",
         }}
       >
-        {/* Left Side: Video */}
-        {project.video && (
-          <Box
-            sx={{
-              flex: 1,
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <iframe
-              width="100%" // Ensures responsiveness
-              height="auto"
-              style={{
-                aspectRatio: "9 / 16", // Maintains Shorts aspect ratio
-                maxWidth: "280px", // Limits max width on mobile
-                borderRadius: "8px", // Adds subtle rounded corners
-              }}
-              src={project.video}
-              title={project.name}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+        {/* Left Side: Carousel */}
+        <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
+          <Box sx={{ width: "100%", maxWidth: 350 }}>
+            <Slider {...settings}>
+              {[].concat(project.image).map(
+                (
+                  img,
+                  index // Always treat as array
+                ) => (
+                  <Box
+                    key={index}
+                    sx={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <img
+                      src={img}
+                      alt={`Slide ${index + 1}`}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                        boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)",
+                      }}
+                    />
+                  </Box>
+                )
+              )}
+            </Slider>
           </Box>
-        )}
+        </Box>
 
         {/* Middle: Project Details */}
         <Box sx={{ flex: 1, textAlign: "center" }}>
@@ -139,28 +160,6 @@ function ProjectItemDetails() {
           >
             Back to Projects
           </Button>
-        </Box>
-
-        {/* Right Side: Image */}
-        <Box
-          sx={{
-            flex: 1, // Image takes equal space
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <CardMedia
-            component="img"
-            image={project.image}
-            alt={project.name}
-            sx={{
-              width: { xs: "100%", md: 350 },
-              height: "auto",
-              objectFit: "cover",
-              borderRadius: 2,
-              boxShadow: 2,
-            }}
-          />
         </Box>
       </Box>
     </Container>
