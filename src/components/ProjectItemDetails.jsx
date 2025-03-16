@@ -11,6 +11,7 @@ import {
   Link,
   IconButton,
   Dialog,
+  Stack,
 } from "@mui/material";
 import GetAppIcon from "@mui/icons-material/GetApp";
 import projectsData from "../data/projectData.json";
@@ -18,6 +19,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CloseIcon from "@mui/icons-material/Close";
 import PublicIcon from "@mui/icons-material/Public";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function ProjectItemDetails() {
   const { name } = useParams(); // Get project Name from URL
@@ -62,7 +64,7 @@ function ProjectItemDetails() {
   };
 
   return (
-    <Container sx={{ mt: 4, mb: 4 }}>
+    <Container sx={{ mt: 4, mb: 2 }}>
       <Box
         sx={{
           display: "flex",
@@ -97,46 +99,96 @@ function ProjectItemDetails() {
           </Typography>
         </Box>
 
-        {/* Middle: Project Specs & GitHub Link */}
-        <Container sx={{ textAlign: "center", mt: 1, mb: 0 }}>
-          {project.githubProject && (
-            <IconButton
-              component={Link}
-              href={project.githubProject}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit GitHub project"
-              sx={{ border: "2px solid #FFFFFF", borderRadius: "3px" }}
-            >
-              <GitHubIcon sx={{ color: "background.paper", fontSize: 32 }} />
-              <Typography
-                variant="body1"
-                sx={{ color: "background.paper", ml: 1 }}
+        {/* Middle: Project Specs & Links */}
+        <Container sx={{ textAlign: "center", mt: 0, width: "80%" }}>
+          <Stack
+            direction={{ xs: "column", sm: "column", md: "row" }}
+            spacing={2}
+            alignItems="center"
+            justifyContent="center"
+          >
+            {project.githubProject && (
+              <IconButton
+                component={Link}
+                href={project.githubProject}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit GitHub project"
+                sx={{
+                  border: "2px solid #FFFFFF",
+                  borderRadius: "3px",
+                  backgroundColor: "background.paper",
+                  width: { xs: "80%", sm: "60%", md: "auto" },
+                  "&:hover": {
+                    transform: "scale(1.01)", // Slight increase in size
+                    backgroundColor: "background.paper", // Prevent color change
+                  },
+                }}
               >
-                GitHub Project Page
-              </Typography>
-            </IconButton>
-          )}
-        </Container>
-        <Container sx={{ textAlign: "center", mt: 0 }}>
-          {project.exampleLink && (
-            <IconButton
-              component={Link}
-              href={project.exampleLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit outcome link"
-              sx={{ border: "2px solid #FFFFFF", borderRadius: "3px" }}
-            >
-              <PublicIcon sx={{ color: "background.paper", fontSize: 32 }} />
-              <Typography
-                variant="body1"
-                sx={{ color: "background.paper", ml: 1 }}
+                <GitHubIcon sx={{ color: "primary.main", fontSize: 32 }} />
+                <Typography
+                  variant="body1"
+                  sx={{ color: "primary.main", ml: 2 }}
+                >
+                  GitHub Project Page
+                </Typography>
+              </IconButton>
+            )}
+            {project.exampleLink && (
+              <IconButton
+                component={Link}
+                href={project.exampleLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit outcome link"
+                sx={{
+                  border: "2px solid #FFFFFF",
+                  borderRadius: "3px",
+                  backgroundColor: "background.paper",
+                  width: { xs: "80%", sm: "60%", md: "auto" },
+                  "&:hover": {
+                    transform: "scale(1.01)", // Slight increase in size
+                    backgroundColor: "background.paper", // Prevent color change
+                  },
+                }}
               >
-                View Outcome
-              </Typography>
-            </IconButton>
-          )}
+                <PublicIcon sx={{ color: "primary.main", fontSize: 32 }} />
+                <Typography
+                  variant="body1"
+                  sx={{ color: "primary.main", ml: 1 }}
+                >
+                  View Outcome
+                </Typography>
+              </IconButton>
+            )}
+            {project.linkedInPost && (
+              <IconButton
+                component={Link}
+                href={project.linkedInPost}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit post link in linkedin"
+                sx={{
+                  border: "2px solid #FFFFFF",
+                  borderRadius: "3px",
+                  backgroundColor: "background.paper",
+                  width: { xs: "80%", sm: "60%", md: "auto" },
+                  "&:hover": {
+                    transform: "scale(1.01)", // Slight increase in size
+                    backgroundColor: "background.paper", // Prevent color change
+                  },
+                }}
+              >
+                <LinkedInIcon sx={{ color: "primary.main", fontSize: 32 }} />
+                <Typography
+                  variant="body1"
+                  sx={{ color: "primary.main", ml: 1 }}
+                >
+                  LinkedIn Post
+                </Typography>
+              </IconButton>
+            )}
+          </Stack>
         </Container>
 
         {/* Bottom: Carousel */}
@@ -185,9 +237,10 @@ function ProjectItemDetails() {
           variant="contained"
           sx={{
             textTransform: "none",
-            fontSize: "1.005rem",
+            fontSize: "1.01rem",
             border: "4px solid #FFFFFF",
             mt: 2,
+            width: "80%",
           }}
           onClick={() => navigate("/projects")}
         >

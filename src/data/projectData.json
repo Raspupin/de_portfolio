@@ -1,20 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Industrial Companies in Israel Data Set",
+    "name": "Mapping International Companies in Israel",
     "image": [
       "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImgLogo.jpg",
       "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg1.jpeg",
       "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg2.jpeg",
-      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg3.jpeg"
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg3.jpeg",
+      "/ProjectPhotos/IndustrialCompaniesInIsrael/companiesImg4.jpeg"
     ],
-    "description": "insert text",
+    "description": "For this project, I mapped 1,300 international companies operating in Israel using a combination of AI tools, automation, and web scraping techniques. The goal was to compile an accurate and comprehensive dataset while optimizing the data collection and verification process. To achieve this, I utilized local LLMs (LLama2 & LLAMA3), running them with Python algorithms to verify company information and extract relevant details. I also leveraged ChatGPT and other GPTs to enhance data processing and automate various tasks. For large-scale data extraction, I used web scraping with Java and Selenium, collecting structured information from sources like stock exchanges (US, Israel, London), LinkedIn, and Google. Additionally, I developed custom prompts to analyze company interests, such as identifying those with potential investment in robotics startups. To refine and process the data, I implemented Python and Java programs to eliminate duplicates, merge datasets, and structure the information. Finally, I analyzed the compiled data using Google Spreadsheets, generating insights through tables and graphs. The final dataset includes details such as company name, industry sector, geographic location, presence in Israel, and global distribution. This project reinforced my ability to integrate AI tools, automate processes, and extract actionable insights from large datasets.",
     "githubProject": "",
-    "exampleLink": ""
+    "exampleLink": "https://docs.google.com/spreadsheets/d/1uFWMTzaJp4ySXSncXGQH86qDLAf287D9/edit?gid=1518741555#gid=1518741555",
+    "linkedInPost": "https://www.linkedin.com/posts/daniel-ermakov-591580273_how-i-mapped-1300-international-companies-activity-7206220768366465024-OI8u?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELTdz0BpPXJsa5jUj4BkWzj2s2btpjc4QQ"
   },
   {
     "id": 2,
-    "name": "Room8es Web App",
+    "name": "Room8es Web App - Finals Project",
     "image": [
       "/ProjectPhotos/Room8tsWebApp/roomImgLogo.jpeg",
       "/ProjectPhotos/Room8tsWebApp/roomImg1.jpeg",
@@ -22,9 +24,10 @@
       "/ProjectPhotos/Room8tsWebApp/roomImg3.jpeg",
       "/ProjectPhotos/Room8tsWebApp/roomImg4.jpeg"
     ],
-    "description": "insert text",
+    "description": "For my final project, my partner and I developed a Single Page Application (SPA) using React and Express.js to improve communication and management in shared apartments. The idea stemmed from personal experience as a student living with roommates, highlighting the need for a centralized tool to simplify daily tasks. The development process began with research, surveys, and data analysis to identify key user needs. We structured the project with spreadsheets for data organization, designed use cases, and built an ERD for the database using MySQL. Since this was our first experience with React and Express.js, we deliberately learned everything from scratch. We worked in agile sprints, setting clear goals for each phase, and leveraged AI tools like ChatGPT-4o to accelerate learning and problem-solving. The result was a fully functional and responsive application that met all project requirements within the given timeframe. This experience reinforced my ability to quickly adapt to new technologies—something I also practiced during my internship, where I learned the importance of hands-on work and incremental progress.",
     "githubProject": "https://github.com/Raspupin/roommatesApp",
-    "exampleLink": ""
+    "exampleLink": "",
+    "linkedInPost": "https://www.linkedin.com/posts/daniel-ermakov-591580273_%D7%90%D7%97%D7%A8%D7%99-%D7%AA%D7%A7%D7%95%D7%A4%D7%94-%D7%9E%D7%90%D7%AA%D7%92%D7%A8%D7%AA-%D7%91%D7%9E%D7%99%D7%95%D7%97%D7%93-%D7%9B%D7%A9%D7%92%D7%A8%D7%99%D7%9D-%D7%91%D7%92%D7%91%D7%95%D7%9C-%D7%94%D7%A6%D7%A4%D7%95%D7%9F-activity-7251256276481966080-BNSi?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELTdz0BpPXJsa5jUj4BkWzj2s2btpjc4QQ"
   },
   {
     "id": 3,
@@ -37,6 +40,7 @@
     ],
     "description": "I developed a reusable portfolio website template using React and Vite, designed for quick deployment and easy customization. This very website was built using the same template. The project features a fully responsive design, single-page application (SPA) structure, and JSON-based content management, allowing projects to be added or updated without modifying the code. A built-in theme system controls colors, fonts, and layout centrally, making design changes instant. With automated deployment via GitHub and Vercel, this template enables fast and cost-effective website creation, avoiding expensive platforms like Wix or GoDaddy.",
     "githubProject": "https://github.com/Raspupin/de_portfolio",
-    "exampleLink": "https://edgartemkin.site/"
+    "exampleLink": "https://edgartemkin.site/",
+    "linkedInPost": "https://www.linkedin.com/posts/daniel-ermakov-591580273_%D7%A4%D7%99%D7%AA%D7%95%D7%97-%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98-%D7%A2%D7%A6%D7%9E%D7%90%D7%99-%D7%A8%D7%90%D7%A9%D7%95%D7%9F-%D7%90%D7%AA%D7%A8-%D7%AA%D7%93%D7%9E%D7%99%D7%AA-%D7%9E%D7%91%D7%95%D7%A1%D7%A1-activity-7305949693195280385-eTVD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELTdz0BpPXJsa5jUj4BkWzj2s2btpjc4QQ"
   }
 ]
