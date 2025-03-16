@@ -94,7 +94,17 @@ function ProjectItemDetails() {
           >
             {project.name}
           </Typography>
-          <Typography variant="body1" sx={{ color: "background.paper", mt: 2 }}>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "background.paper",
+              mt: 2,
+              textAlign: "justify",
+              wordBreak: "break-word",
+              whiteSpace: "normal",
+              lineHeight: 1.6,
+            }}
+          >
             {project.description}
           </Typography>
         </Box>
