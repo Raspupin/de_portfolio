@@ -74,7 +74,7 @@ function ProjectItemDetails() {
             sx={{
               color: "background.paper",
               mt: 2,
-              textAlign: "justify",
+              textAlign: "center",
               wordBreak: "break-word",
               whiteSpace: "normal",
               lineHeight: 1.6,

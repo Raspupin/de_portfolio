@@ -81,7 +81,7 @@ function About({ data }) {
               variant="body1"
               sx={{
                 color: "background.paper", // Theme text color
-                textAlign: "justify",
+                textAlign: "left",
                 lineHeight: 1.6, // Improves readability
               }}
             >
